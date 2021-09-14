@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 59, 129);
+  background-attachment: fixed;
+}
+
+.lefthand {
+  flex: 1;
+  height: 100vh;
+  max-height: none;
+  padding: 0.5em;
+  padding-top: 0.5em;
+  flex-basis: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.righthand {
+  flex: 1;
+  height: 100vh;
+  max-height: none;
+  padding: 0.5em;
+  flex-basis: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#formdiv {
+  background-color: rgba(185, 214, 20, 0.404);
+  border-radius: 50px;
+  width: 95%;
+  min-height: 95%;
+  max-height: none;
+  margin: auto;
+  padding: 2%;
+  color: rgb(79, 4, 88);
+  font-size: larger;
+  box-shadow: rgba(8, 150, 131, 0.452) 3px 2px 3px 2px;
+}
+/*select atleast two items*/
+.small {
+  font-size: 15px;
+}
+label {
+  margin: 15px 5px;
+}
+input {
+  margin: 15px;
+}
+input[type="checkbox"] {
+  margin: 15px 0px 15px 25px;
+}
+input[type="radio"] {
+  margin: 15px 0px 15px 25px;
+}
+input[type="text"] {
+  margin: 15px;
+  width: 40%;
+}
+button {
+  margin: 5px 10px;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: rgba(24, 235, 207, 0.575);
+  border-color: rgba(52, 219, 197, 0.329);
+  color: rgb(86, 4, 97);
+  font-size: large;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(27, 161, 144, 0.596);
+}
+
+.star::after {
+  content: " *";
+  color: rgb(141, 6, 6);
+}
+
+/* For Table */
+
+#tablediv {
+  background-color: rgba(231, 235, 233, 0.404);
+  border-radius: 25px;
+  width: 98%;
+  height: 95%;
+  max-height: none;
+  margin: auto;
+  padding: 1% 0.5%;
+  color: rgb(89, 0, 100);
+  box-shadow: rgba(8, 150, 131, 0.452) 3px 2px 3px 2px;
+  overflow-wrap: normal;
+}
+table {
+  border: 2px solid rgba(5, 179, 135, 0.897);
+  border-radius: 20px;
+  width: 100%;
+  margin: auto;
+  padding: 2px;
+}
+th {
+  background-color: rgba(10, 219, 167, 0.774);
+  padding: 5px;
+  border-collapse: collapse;
+  text-align: center;
+}
+td {
+  padding: 5px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+tr:nth-child(odd) td {
+  background-color: rgba(10, 145, 150, 0.37);
+}
+tr:nth-child(even) td {
+  background-color: rgba(10, 145, 150, 0.226);
+}
+tr td:first-child {
+  border-radius: 20px 0 0 20px;
+}
+tr td:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+th:first-child {
+  border-radius: 20px 0 0 20px;
+}
+th:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    flex-direction: column;
+  }
+  .lefthand,
+  .righthand {
+    flex-basis: 100%;
+  }
+  #formdiv {
+    width: 95vw;
+    font-size: medium;
+  }
+  #tablediv {
+    width: 99vw;
+  }
+  table {
+    width: 99%;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  table {
+    font-size: 12px;
+  }
+  #formdiv {
+    padding: 1%;
+    font-size: large;
+    height: 80vh;
+  }
+  label {
+    margin: 10px 3px;
+  }
+  input {
+    margin: 10px;
+  }
+  input[type="checkbox"] {
+    margin: 10px 0px 10px 20px;
+  }
+  input[type="radio"] {
+    margin: 10px 0px 10px 20px;
+  }
+  input[type="text"] {
+    margin: 10px;
+    width: 40%;
+  }
+  button {
+    margin: 3px 8px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  table {
+    box-sizing: border-box;
+    font-size: 7px;
+    width: 100%;
+  }
+  #tablediv {
+    flex-basis: 100%;
+  }
+}
